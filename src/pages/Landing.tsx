@@ -45,13 +45,13 @@ const Landing = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-6 text-sm font-medium">
-              <a href="#features" className="text-gray-600 hover:text-primary transition-colors">Features</a>
-              <a href="#how-it-works" className="text-gray-600 hover:text-primary transition-colors">How it Works</a>
-              <a href="#pricing" className="text-gray-600 hover:text-primary transition-colors">Pricing</a>
+              <button className="text-gray-600 hover:text-primary transition-colors">Features</button>
+              <button className="text-gray-600 hover:text-primary transition-colors">How it Works</button>
+              <button className="text-gray-600 hover:text-primary transition-colors">Pricing</button>
             </div>
 
             <Button 
-              onClick={handleLogin}
+              onClick={user ? () => navigate('/dashboard') : handleLogin}
               variant="outline" 
               size="sm"
               className="rounded-full"
